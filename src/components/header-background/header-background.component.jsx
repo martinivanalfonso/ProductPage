@@ -10,15 +10,6 @@ top:0;
 z-index: -1;
 `
 
-const HeaderBackgroundTopContainer = styled.div`
-width: 100vw;
-height:5vh;
-background-color: salmon;
-position:fixed;
-top:0;
-z-index: 5;
-`
-
 const HeaderBackground = () => (
 <HeaderBackgroundContainer />
 )
