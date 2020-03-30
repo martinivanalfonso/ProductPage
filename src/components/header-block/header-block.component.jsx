@@ -22,8 +22,6 @@ grid-template-columns: 1fr 1fr;
 const HeaderBlock = () => (<HeaderBlockContainer>
   <HeaderLeftSide />
   <HeaderImage />
-  <HeaderImage />
-  <HeaderImage />
 </HeaderBlockContainer>)
 
 export default HeaderBlock
