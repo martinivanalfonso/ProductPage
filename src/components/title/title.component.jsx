@@ -6,6 +6,7 @@ padding: 50px;
 margin-left: 10vw;
 position: absolute;
 font-size: 2rem;
+z-index: 5;
 `
 
 const Title = () => (

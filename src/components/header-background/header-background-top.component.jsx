@@ -4,15 +4,15 @@ import styled from 'styled-components'
 const HeaderBackgroundTopContainer = styled.div`
 width: 100vw;
 height:10vh;
-background-color: salmon;
+background-color: ${props => props.primaryColor};
 position:fixed;
 top:0;
-z-index: 5;
+z-index: 10;
 @media screen and (max-width: 800px) {
     height: 2.5vh;
   }
 `
 
-const HeaderBackgroundTop = () => (<HeaderBackgroundTopContainer/>)
+const HeaderBackgroundTop = ({ primaryColor }) => (<HeaderBackgroundTopContainer primaryColor={primaryColor}/>)
 
 export default HeaderBackgroundTop
