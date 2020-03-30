@@ -1,6 +1,9 @@
 import primaryColorTypes from './primary-color.types'
 
-export const updateColorType = color => ({
-    type: primaryColorTypes.UPDATE_PRIMARYCOLOR,
-    payload: color
+export const updateColorType = () => ({
+    type: primaryColorTypes.UPDATE_PRIMARYCOLOR
+})
+
+export const updateSlide = () => ({
+    type: primaryColorTypes.UPDATE_SLIDE,
 })

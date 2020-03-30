@@ -8,7 +8,7 @@ import Title from "../title/title.component";
 const HeaderLeftSideContainer = styled.div`
   width: 100%;
   height: 75vh;
-  background-color: yellow;
+  background-color: white;
   display: grid;
 `;
 

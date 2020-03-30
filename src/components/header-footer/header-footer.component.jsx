@@ -18,7 +18,8 @@ const HeaderSocialMedia = styled.div`
 display: grid;
 grid-template-columns: 1fr;
 padding: 20px;
-margin-top: -100px
+margin-top: -100px;
+cursor:pointer;
 `;
 
 const HeaderFooter = () => (

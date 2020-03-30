@@ -4,7 +4,7 @@ import styled from "styled-components";
 const ProjectViewContainer = styled.div`
 width: 90%;
 height: 500px;
-background-color: violet;
+background-color: white;
 display: grid;
 grid-template-columns: 1fr 1fr;
 `

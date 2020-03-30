@@ -5,7 +5,7 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 const ArrowForwardContainer = styled.div`
 width: 100px;
 height: 80px;
-background-color:blue;
+background-color:white;
 display: flex;
 justify-content: center;
 align-items: center;

@@ -8,7 +8,9 @@ display: flex;
 justify-content: space-between;
 padding: 20px;
 `
-const MenuSpan = styled.span`/*  */`
+const MenuSpan = styled.span`
+cursor:pointer;
+`
 
 const HeaderMenu = () => (
 <HeaderMenuContainer>

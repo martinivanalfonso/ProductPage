@@ -5,6 +5,7 @@ const HeaderBackgroundTopContainer = styled.div`
 width: 100vw;
 height:10vh;
 background-color: ${props => props.primaryColor};
+transition: background-color 0.5s ease-in-out;
 position:fixed;
 top:0;
 z-index: 10;
