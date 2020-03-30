@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import HeaderLeftSide from '../header-left-side/header-left-side.component'
+import HeaderImage from '../header-image/header-image.component'
+
 const HeaderBlockContainer = styled.div`
 width: 90vw;
 max-width: 1140px;
@@ -16,22 +19,11 @@ grid-template-columns: 1fr 1fr;
 }
 `
 
-const HeaderImageContainer = styled.div`
-width: 100%;
-height: 75vh;
-background-color:red;
-`
-const HeaderMenuContainer = styled.div`
-width: 100%;
-height: 75vh;
-background-color:yellow;
-`
-
 const HeaderBlock = () => (<HeaderBlockContainer>
-  <HeaderMenuContainer />
-  <HeaderImageContainer />
-  <HeaderImageContainer />
-  <HeaderMenuContainer />
+  <HeaderLeftSide />
+  <HeaderImage />
+  <HeaderImage />
+  <HeaderImage />
 </HeaderBlockContainer>)
 
 export default HeaderBlock
