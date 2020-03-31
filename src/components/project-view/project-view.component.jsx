@@ -1,16 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import { connect } from 'react-redux'
+import { selectDarkModeBackground } from '../../redux/header/header.selector'
+import { createStructuredSelector} from 'reselect'
 
 const ProjectViewContainer = styled.div`
 width: 90%;
 height: 500px;
-background-color: white;
+background-color: ${props => props.darkMode};
 display: grid;
 grid-template-columns: 1fr 1fr;
 `
 
-const ProjectView = ({title, info, imageUrl}) => (
-<ProjectViewContainer>
+const ProjectView = ({title, info, imageUrl, darkMode}) => (
+<ProjectViewContainer darkMode={darkMode}>
     <div>
     <h2>Title of the project</h2>
     <p>Title of the project</p>
@@ -19,4 +22,10 @@ const ProjectView = ({title, info, imageUrl}) => (
 </ProjectViewContainer>
 )
 
-export default ProjectView
+
+const mapStateToProps = createStructuredSelector({
+    darkMode: selectDarkModeBackground
+  })
+  
+  export default connect(mapStateToProps)(ProjectView);
+  

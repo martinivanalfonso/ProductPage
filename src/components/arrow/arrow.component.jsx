@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { connect } from "react-redux";
-import { updateColorType, updateSlide } from '../../redux/primary-color/primary-color.actions'
+import { updateHeader } from '../../redux/header/header.actions'
 import { createStructuredSelector } from 'reselect'
-import { selectPrimaryColor } from '../../redux/primary-color/primary-color.selector'
+import { selectPrimaryColor } from '../../redux/header/header.selector'
 
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
@@ -18,19 +18,14 @@ const ArrowContainer = styled.div`
   cursor: pointer;
 `;
 
-const Arrow = ({ updateColorType, updateSlide, primaryColor }) => (
-  <ArrowContainer primaryColor={primaryColor} onClick={() => {
-    updateColorType()
-    updateSlide()
-    console.log('hola')
-    }}>
+const Arrow = ({ updateHeader, primaryColor }) => (
+  <ArrowContainer primaryColor={primaryColor} onClick={() => updateHeader() }>
     <ArrowBackIcon fontSize="large" />
   </ArrowContainer>
 );
 
 const mapDispatchToProps = dispatch => ({
-    updateColorType: () => dispatch(updateColorType()),
-    updateSlide: () => dispatch(updateSlide()),
+    updateHeader: () => dispatch(updateHeader()),
 });
 const mapStateToProps = createStructuredSelector({
   primaryColor: selectPrimaryColor

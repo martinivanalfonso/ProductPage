@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { selectSlideToShow } from "../../redux/primary-color/primary-color.selector";
+import { selectSlideToShow } from "../../redux/header/header.selector";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import ArrowForward from "../arrow/arrow-forward.component";

@@ -1,6 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import Brightness4Icon from '@material-ui/icons/Brightness4';
+import { connect } from "react-redux";
+import { switchMode } from '../../redux/header/header.actions'
+
+
 
 const HeaderMenuContainer = styled.div`
 height: 80px;
@@ -10,14 +14,25 @@ padding: 20px;
 `
 const MenuSpan = styled.span`
 cursor:pointer;
+padding: 10px;
+z-index: 6;
 `
 
-const HeaderMenu = () => (
+const IconSpan = styled.span`
+cursor:pointer;
+z-index: 6;
+`
+
+const HeaderMenu = ({switchMode}) => (
 <HeaderMenuContainer>
-<MenuSpan><Brightness4Icon /></MenuSpan>
+<IconSpan onClick={() => switchMode()}><Brightness4Icon fontSize="large"/></IconSpan>
 <MenuSpan>About</MenuSpan>
 <MenuSpan>Projects</MenuSpan>
 <MenuSpan>Contact</MenuSpan>
 </HeaderMenuContainer>)
 
-export default HeaderMenu
+const mapDispatchToProps = dispatch => ({
+    switchMode: () => dispatch(switchMode()),
+});
+
+export default connect(null, mapDispatchToProps)(HeaderMenu);

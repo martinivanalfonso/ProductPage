@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 
-import primaryColorReducer from './primary-color/primary-color.reducer'
+import headerReducer from './header/header.reducer'
 
 
 const rootReducer = combineReducers({
-    primaryColor: primaryColorReducer
+    header: headerReducer
 })
 
 export default rootReducer

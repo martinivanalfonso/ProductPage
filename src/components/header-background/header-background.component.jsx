@@ -1,10 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
-import { selectPrimaryColor } from '../../redux/primary-color/primary-color.selector'
+import { selectPrimaryColor } from '../../redux/header/header.selector'
 
 import styled from 'styled-components'
-import HeaderBackgroundTop from './header-background-top.component'
 
 
 const HeaderBackgroundContainer = styled.div`
@@ -16,10 +15,22 @@ position:fixed;
 top:0;
 z-index: -1;
 `
+const HeaderBackgroundTopContainer = styled.div`
+width: 100vw;
+height:10vh;
+background-color: ${props => props.primaryColor};
+transition: background-color 0.5s ease-in-out;
+position:fixed;
+top:0;
+z-index: 10;
+@media screen and (max-width: 800px) {
+    height: 2.5vh;
+  }
+`
 
 const HeaderBackground = ({ primaryColor }) => (
 <div>
-<HeaderBackgroundTop primaryColor={primaryColor}/>
+<HeaderBackgroundTopContainer primaryColor={primaryColor}/>
 <HeaderBackgroundContainer primaryColor={primaryColor} />
 </div>
 )

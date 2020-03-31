@@ -1,6 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { selectTitleToShow } from "../../redux/header/header.selector";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+
 const TitleContainer = styled.div`
 padding: 50px;
 margin-left: 10vw;
@@ -9,9 +13,13 @@ font-size: 2rem;
 z-index: 5;
 `
 
-const Title = () => (
+const Title = ({ text }) => (
 <TitleContainer>
-    <h1><strong>Hey there</strong> this is <br />a title undestand</h1>
+<h1>{text}</h1>
 </TitleContainer>)
 
-export default Title
+const mapStateToProps = createStructuredSelector({
+    text: selectTitleToShow
+  });
+
+export default connect(mapStateToProps)(Title)
