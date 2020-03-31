@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { connect } from 'react-redux'
 import { selectDarkModeBackground } from '../../redux/header/header.selector'
 import { createStructuredSelector} from 'reselect'
+import { selectTitleToShow } from "../../redux/header/header.selector";
+
 
 
 
@@ -17,15 +19,16 @@ const HeaderLeftSideContainer = styled.div`
   display: grid;
 `;
 
-const HeaderLeftSide = ({ darkMode }) => (
+const HeaderLeftSide = ({ darkMode, title }) => (
   <HeaderLeftSideContainer darkMode={darkMode} >
     <HeaderMenu />
-    <Title />
+    <Title header title={title} />
     <HeaderFooter />
   </HeaderLeftSideContainer>
 );
 const mapStateToProps = createStructuredSelector({
-  darkMode: selectDarkModeBackground
+  darkMode: selectDarkModeBackground,
+  title: selectTitleToShow
 })
 
 export default connect(mapStateToProps)(HeaderLeftSide);

@@ -25,7 +25,7 @@ const ImageSlider = styled.div`
   height: 75vh;
   display: flex;
   overflow-x: auto;
-  background-color: black;
+  background-color: white;
   overflow: hidden;
   position: relative;
 `;
@@ -34,8 +34,9 @@ const Slide = styled.div`
   height: 75vh;
   flex-shrink: 0;
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  background-repeat:no-repeat;
   transition: opacity 0.5s ease-in-out;
   opacity: ${({ slideIdToShow, id }) => (slideIdToShow === id ? "1" : "0")};
   position: absolute;
@@ -49,17 +50,17 @@ const HeaderImage = ({ slideIdToShow }) => {
         <Slide
           id="slide1"
           slideIdToShow={slideIdToShow}
-          imageUrl="https://i.ibb.co/cvpntL1/hats.png"
+          imageUrl="https://i.ibb.co/J2XWQjD/1.png"
         />
         <Slide
           id="slide2"
           slideIdToShow={slideIdToShow}
-          imageUrl="https://i.ibb.co/px2tCc3/jackets.png"
+          imageUrl="https://i.ibb.co/17cP41z/2.png"
         />
         <Slide
           id="slide3"
           slideIdToShow={slideIdToShow}
-          imageUrl="https://i.ibb.co/0jqHpnp/sneakers.png"
+          imageUrl="https://i.ibb.co/rbZvHs7/3.png"
         />
       </ImageSlider>
       <ImageFooterContainer>

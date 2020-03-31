@@ -16,6 +16,11 @@ const MenuSpan = styled.span`
 cursor:pointer;
 padding: 10px;
 z-index: 6;
+transition: all 0.3s ease-in-out;
+
+&:hover {
+    font-size:1.2rem;
+  }
 `
 
 const IconSpan = styled.span`

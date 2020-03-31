@@ -1,11 +1,11 @@
 import headerTypes from "./header.types";
 
 const INITIAL_STATE = {
-  primaryColor: ["#f38181", "#fce38a", "#95e1d3"],
-  secondaryColor: ["#40434E","#702632","#381460"],
-  darkMode: ['#eaffd0','#222831'],
+  primaryColor: ["#702632","#40434E","#381460"],
+  secondaryColor: ["#f38181", "#fce38a", "#95e1d3"],
+  darkMode: ['#222831','#eaffd0'],
   slideIdToShowArray: ["slide1", "slide2", "slide3"],
-  titleToShow: ["Title of the project", "Second title of the project", "Third and last title of the project"]
+  titleToShow: ["Hello there!", "Specialized in React", "I'm a front end web developer"]
 };
 
 const headerReducer = (state = INITIAL_STATE, action) => {

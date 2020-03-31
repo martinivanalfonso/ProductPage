@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { connect } from 'react-redux'
 import { createStructuredSelector} from 'reselect'
-import { selectDarkModeText } from './redux/header/header.selector'
+import { selectDarkModeText, selectDarkModeBackground } from './redux/header/header.selector'
 
 import { createGlobalStyle } from 'styled-components'
 import HeaderBackground from "./components/header-background/header-background.component";
@@ -12,6 +12,8 @@ import BodyBlock from './components/body-block/body-block.component'
 const GlobalStyle = createGlobalStyle`
 body {
   color: ${props => props.darkMode};
+  background: ${props => props.darkModeBackground};
+  padding-bottom: 15vh;
 }
 ::-webkit-scrollbar {
   width: 15px;
@@ -27,9 +29,9 @@ body {
   background-color: orange;
 }
 `
-const App = ({ darkMode }) => (
+const App = ({ darkMode, darkModeBackground }) => (
       <div>
-        <GlobalStyle darkMode={darkMode} />
+        <GlobalStyle darkMode={darkMode} darkModeBackground={darkModeBackground} />
         <HeaderBackground />
         <HeaderBlock />
         <BodyBlock />
@@ -37,6 +39,7 @@ const App = ({ darkMode }) => (
     );
 const mapStateToProps = createStructuredSelector({
   darkMode: selectDarkModeText,
+  darkModeBackground: selectDarkModeBackground,
 })
 
 export default connect(mapStateToProps)(App);
