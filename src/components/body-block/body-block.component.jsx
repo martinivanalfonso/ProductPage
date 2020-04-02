@@ -22,17 +22,7 @@ const BodyBlockContainer = styled.div`
 
 const BodyBlock = ({ darkMode }) => (
   <BodyBlockContainer darkMode={darkMode}>
-    <Title title="My projects"/>
-    <ProjectView
-      imageUrl="https://i.ibb.co/cF3Lbt0/crownclothing.png"
-      title="Crown Clothing"
-      info="E-commerce responsive clothing shop created using React, Redux and styled-components library and configured to fetch data from a real time database."
-    />
-    <ProjectView
-      imageUrl="https://i.ibb.co/N3j6DGG/myproblemcloud.png"
-      title="My Problem Cloud"
-      info="Interactive website created to store logic problems and their solution"
-    />
+    <Title title="Details"/>
   </BodyBlockContainer>
 );
 

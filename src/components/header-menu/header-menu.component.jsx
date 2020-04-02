@@ -31,8 +31,8 @@ z-index: 6;
 const HeaderMenu = ({switchMode}) => (
 <HeaderMenuContainer>
 <IconSpan onClick={() => switchMode()}><Brightness4Icon fontSize="large"/></IconSpan>
+<MenuSpan>Product</MenuSpan>
 <MenuSpan>About</MenuSpan>
-<MenuSpan>Projects</MenuSpan>
 <MenuSpan>Contact</MenuSpan>
 </HeaderMenuContainer>)
 

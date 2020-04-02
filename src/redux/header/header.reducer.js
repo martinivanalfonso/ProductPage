@@ -5,7 +5,7 @@ const INITIAL_STATE = {
   secondaryColor: ["#f38181", "#fce38a", "#95e1d3"],
   darkMode: ['#222831','#eaffd0'],
   slideIdToShowArray: ["slide1", "slide2", "slide3"],
-  titleToShow: ["Hello there!", "Specialized in React", "I'm a front end web developer"]
+  titleToShow: ["Vitality Shot", "Get back to your roots", "Choice of flavours"]
 };
 
 const headerReducer = (state = INITIAL_STATE, action) => {

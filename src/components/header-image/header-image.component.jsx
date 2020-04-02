@@ -50,17 +50,17 @@ const HeaderImage = ({ slideIdToShow }) => {
         <Slide
           id="slide1"
           slideIdToShow={slideIdToShow}
-          imageUrl="https://i.ibb.co/J2XWQjD/1.png"
+          imageUrl="https://i.ibb.co/dkq68sw/prod3.jpg"
         />
         <Slide
           id="slide2"
           slideIdToShow={slideIdToShow}
-          imageUrl="https://i.ibb.co/17cP41z/2.png"
+          imageUrl="https://i.ibb.co/bzrHtQx/prod2.jpg"
         />
         <Slide
           id="slide3"
           slideIdToShow={slideIdToShow}
-          imageUrl="https://i.ibb.co/rbZvHs7/3.png"
+          imageUrl="https://i.ibb.co/WpnrpG0/prod1.jpg"
         />
       </ImageSlider>
       <ImageFooterContainer>
