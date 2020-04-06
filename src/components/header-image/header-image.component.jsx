@@ -34,7 +34,7 @@ const Slide = styled.div`
   height: 75vh;
   flex-shrink: 0;
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
   transition: opacity 0.5s ease-in-out;
